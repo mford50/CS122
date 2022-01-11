@@ -1,5 +1,64 @@
 {
   "tests": [
-
+    {
+      "name": "Card constructor test",
+      "setup": "cd BlackjackStarter",
+      "run": "gradle test --tests CardTest.cardConstructorTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Card show/hide test",
+      "setup": "cd BlackjackStarter",
+      "run": "gradle test --tests CardTest.cardShowHideTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "Deck constructor test",
+      "setup": "cd BlackjackStarter",
+      "run": "gradle test --tests DeckTest.deckConstructorTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "Deck deal test",
+      "setup": "cd BlackjackStarter",
+      "run": "gradle test --tests DeckTest.deckDealTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "Deck shuffle test",
+      "setup": "cd BlackjackStarter",
+      "run": "gradle test --tests DeckTest.deckShuffleTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+      "name": "Face card value test",
+      "setup": "cd BlackjackStarter",
+      "run": "gradle test --tests DeckTest.cardValueTest",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    }
   ]
 }
