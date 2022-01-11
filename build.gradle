@@ -1,0 +1,31 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.11'
+    implementation 'junit:junit:4.11'
+}
+
+// These lines can be removed when you use the default directories src/main/kotlin and src/test/kotlin
+sourceSets {
+    main.java.srcDirs += 'BlackjackStarter'
+    main.resources.srcDirs += 'BlackjackStarter'
+    test.java.srcDirs += 'BlackjackStarter'
+    test.resources.srcDirs += 'BlackjackStarter'
+}
+
+// Java target version
+sourceCompatibility = 1.8
+
+test {
+    useJUnit()
+}
+
+tasks.withType(Test) {
+    testLogging {
+        events 'started', 'failed', 'passed'
+    }
+}
