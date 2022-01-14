@@ -106,7 +106,7 @@ public class DeckTest
         Card ten = null;
         Card nine = null;
         
-        // Act
+        
         for (int i = 0; i < 51; i++)
         {
             card = deck.deal();

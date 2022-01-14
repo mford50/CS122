@@ -9,6 +9,10 @@ import java.util.Comparator;
 public class Card
 {
     // private instance variables - Declare a suit (Suit), value (int), visible (boolean), and name (String)
+    private Suit suit;
+    private int value;
+    private boolean visible;
+    private String name;
 
     /**
      * Constructor for objects of class Card 
@@ -20,7 +24,20 @@ public class Card
     public Card(Suit suit, int value, boolean visible, String name) 
     {
         // Assign properties, and ensure the value is between 2 and 11, inclusive.  
- 
+        this.suit = suit;
+        this.visible = visible;
+        this.name = name;
+
+        //test to ensure value is between 2-11
+        if(value > 11 || value < 2)
+        {
+            System.out.println("Please enter values between 2 and 11."); 
+        }
+        else
+        {
+            this.value = value;
+        }
+
     }
 
     /**
@@ -83,6 +100,17 @@ public class Card
     {
         // If the card is visible, display the card's name of suit (ex: Queen of Spades)
         // If the card is not visible, return the string literal "Hidden Card"
+        String card;
+        if(isVisible() == false) 
+        {
+            card = "Hidden Card";
+        }
+        else
+        {
+            card = getName() + " of " + getSuit();
+        }
+        return card;
 
     }
+
 }
